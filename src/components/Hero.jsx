@@ -1,8 +1,8 @@
 function HeroVisual() {
   return (
     <div className="relative mx-auto w-full max-w-3xl" aria-hidden="true">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 blur-3xl" />
-      <div className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50 shadow-2xl shadow-slate-900/10 ring-1 ring-black/5">
+      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 blur-3xl" />
+      <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-white to-slate-50 shadow-2xl shadow-slate-900/10 ring-1 ring-black/5">
         <div className="flex flex-col items-center px-6 pt-12 pb-8 sm:px-10 sm:pt-16">
           <svg viewBox="0 0 560 320" className="w-full max-w-lg animate-subtle-float" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -46,14 +46,14 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="section-shell relative w-full overflow-hidden bg-white pt-14 sm:pt-16"
+      className="section-block relative mx-3 mt-14 overflow-hidden bg-white sm:mx-4 sm:mt-16 lg:mx-6"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="absolute -top-32 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-blue-100/80 via-indigo-50/50 to-teal-100/60 blur-3xl" />
       </div>
 
-      <div className="section-inner relative px-5 pt-16 pb-16 text-center sm:px-8 sm:pt-20 sm:pb-20 lg:px-12 lg:pt-24 lg:pb-24">
+      <div className="relative px-5 pt-16 pb-10 text-center sm:px-8 sm:pt-20 sm:pb-14 lg:px-12 lg:pt-24 lg:pb-16">
         <p className="eyebrow mb-5 text-primary animate-fade-in-up">Accessibility-First Technology</p>
 
         <h1
