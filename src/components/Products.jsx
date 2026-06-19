@@ -10,9 +10,9 @@ const products = [
       'Sports training programs',
       'Accessibility-first design',
     ],
-    bg: 'bg-gradient-to-b from-[#eff6ff] via-[#f8fafc] to-white',
-    accent: 'text-primary',
-    iconBg: 'bg-primary/10 text-primary',
+    cardClass: 'card-glow-blue',
+    accent: 'text-cyan-400',
+    glowHover: 'hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]',
     span: 'lg:col-span-2',
     icon: (
       <svg className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -30,9 +30,9 @@ const products = [
       'Real-time accessibility information',
       'Community reporting',
     ],
-    bg: 'bg-gradient-to-b from-[#eef2ff] via-[#f8fafc] to-white',
-    accent: 'text-secondary',
-    iconBg: 'bg-secondary/10 text-secondary',
+    cardClass: 'card-glow-blue',
+    accent: 'text-blue-400',
+    glowHover: 'hover:shadow-[0_0_40px_rgba(37,99,235,0.2)]',
     span: '',
     icon: (
       <svg className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -50,9 +50,9 @@ const products = [
       'Accessibility scoring',
       'Improvement recommendations',
     ],
-    bg: 'bg-gradient-to-b from-[#f0fdfa] via-[#f8fafc] to-white',
-    accent: 'text-accent',
-    iconBg: 'bg-accent/10 text-accent',
+    cardClass: 'card-glow-green',
+    accent: 'text-emerald-400',
+    glowHover: 'hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]',
     span: '',
     icon: (
       <svg className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -66,11 +66,11 @@ export default function Products() {
   return (
     <section id="products" className="section-shell py-4 sm:py-6" aria-labelledby="products-heading">
       <div className="mb-8 text-center sm:mb-10">
-        <p className="eyebrow mb-3 text-slate-400">Our Products</p>
-        <h2 id="products-heading" className="display-md text-slate-text">
+        <p className="eyebrow mb-3 text-cyan-400">Our Products</p>
+        <h2 id="products-heading" className="display-md text-white">
           Our Products
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-slate-500">
+        <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
           Purpose-built platforms for independence, mobility, and daily living.
         </p>
       </div>
@@ -79,24 +79,24 @@ export default function Products() {
         {products.map((product) => (
           <article
             key={product.name}
-            className={`product-tile section-block flex flex-col ${product.bg} ${product.span} ring-1 ring-black/5`}
+            className={`product-tile section-block flex flex-col ${product.cardClass} ${product.glowHover} ${product.span}`}
           >
             <div className="flex flex-1 flex-col items-center px-6 pt-10 pb-6 text-center sm:px-10 sm:pt-12">
-              <div className={`mb-6 inline-flex rounded-2xl p-4 ${product.iconBg}`}>
+              <div className={`mb-6 inline-flex rounded-2xl bg-void/60 p-4 ${product.accent}`}>
                 {product.icon}
               </div>
-              <p className="eyebrow mb-2 text-slate-400">{product.tagline}</p>
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-text sm:text-3xl">
+              <p className="eyebrow mb-2 text-muted">{product.tagline}</p>
+              <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                 {product.name}
               </h3>
-              <p className="mt-3 max-w-md text-[15px] leading-relaxed text-slate-500 sm:text-base">
+              <p className="mt-3 max-w-md text-[15px] leading-relaxed text-muted sm:text-base">
                 {product.description}
               </p>
 
               <h4 className="sr-only">{product.name} features</h4>
               <ul className="mt-8 grid w-full max-w-sm gap-2 text-left sm:max-w-md" role="list">
                 {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2.5 text-[15px] text-slate-600">
+                  <li key={feature} className="flex items-center gap-2.5 text-[15px] text-slate-300">
                     <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-current ${product.accent}`} aria-hidden="true" />
                     {feature}
                   </li>

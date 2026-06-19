@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
+      <div className="page-bg" aria-hidden="true" />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>

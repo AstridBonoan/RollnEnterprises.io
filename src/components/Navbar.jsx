@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Logo from './Logo'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -7,22 +8,6 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
-
-function Logo({ className = '' }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect width="32" height="32" rx="8" fill="#2563EB" />
-      <path d="M8 22V10h3.2l4.8 7.2V10H19v12h-3.2L11 14.8V22H8z" fill="white" />
-      <circle cx="23" cy="16" r="3" fill="#14B8A6" />
-    </svg>
-  )
-}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -47,21 +32,19 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'border-b border-black/5 bg-white/72 shadow-sm backdrop-blur-xl backdrop-saturate-150'
-          : 'bg-white/50 backdrop-blur-md'
+          ? 'border-b border-white/5 bg-void/80 shadow-lg shadow-black/20 backdrop-blur-xl'
+          : 'bg-void/40 backdrop-blur-md'
       }`}
     >
       <nav
-        className="section-shell flex h-12 items-center justify-between sm:h-14"
+        className="section-shell flex h-14 items-center justify-between sm:h-16"
         aria-label="Main navigation"
       >
-        <a
-          href="#home"
-          className="flex items-center gap-2 rounded-lg"
-          aria-label="RollnEnterprises — Home"
-        >
-          <Logo className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
-          <span className="text-[15px] font-semibold tracking-tight text-slate-text sm:text-base">
+        <a href="#home" className="flex items-center gap-2.5 rounded-lg" aria-label="RollnEnterprises — Home">
+          <span className="h-9 w-9 shrink-0 sm:h-10 sm:w-10">
+            <Logo className="h-full w-full" />
+          </span>
+          <span className="hidden bg-gradient-to-r from-bronze-light to-white bg-clip-text text-[15px] font-bold tracking-tight text-transparent sm:inline sm:text-base">
             RollnEnterprises
           </span>
         </a>
@@ -71,7 +54,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-[13px] font-medium text-slate-600 transition-colors hover:text-slate-900"
+                className="text-[13px] font-medium text-muted transition-colors hover:text-white"
               >
                 {link.label}
               </a>
@@ -79,18 +62,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           <a href="#contact" className="link-cta text-[15px]">
             Contact
           </a>
-          <a href="#products" className="btn-pill btn-pill-primary px-4 py-2 text-sm">
+          <a href="#products" className="btn-pill btn-pill-primary px-5 py-2 text-sm">
             Explore Products
           </a>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-black/5 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-300 transition-colors hover:bg-white/10 lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -111,7 +94,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="border-t border-black/5 bg-white/95 px-5 py-5 backdrop-blur-xl lg:hidden"
+          className="border-t border-white/5 bg-void/95 px-5 py-5 backdrop-blur-xl lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation menu"
@@ -121,7 +104,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block rounded-xl px-3 py-3.5 text-[17px] font-medium text-slate-800 transition-colors hover:bg-slate-100"
+                  className="block rounded-xl px-3 py-3.5 text-[17px] font-medium text-slate-200 transition-colors hover:bg-white/5"
                   onClick={closeMenu}
                 >
                   {link.label}
@@ -129,11 +112,11 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-4 flex flex-col gap-3 border-t border-slate-100 pt-4">
+          <div className="mt-4 flex flex-col gap-3 border-t border-white/5 pt-4">
             <a href="#products" className="btn-pill btn-pill-primary w-full" onClick={closeMenu}>
               Explore Products
             </a>
-            <a href="#contact" className="btn-pill btn-pill-secondary w-full" onClick={closeMenu}>
+            <a href="#contact" className="btn-pill btn-pill-outline w-full" onClick={closeMenu}>
               Contact Us
             </a>
           </div>
