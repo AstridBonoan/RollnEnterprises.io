@@ -32,16 +32,23 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'border-b border-teal-400/10 bg-[#141c1f]/80 shadow-lg shadow-black/20 backdrop-blur-xl'
-          : 'bg-[#141c1f]/40 backdrop-blur-md'
+          ? 'border-b border-black/5 bg-white/72 shadow-sm backdrop-blur-xl backdrop-saturate-150'
+          : 'bg-white/50 backdrop-blur-md'
       }`}
     >
       <nav
-        className="section-inner flex h-14 w-full items-center justify-between sm:h-16"
+        className="section-inner flex h-12 w-full items-center justify-between sm:h-14"
         aria-label="Main navigation"
       >
-        <a href="#home" className="rounded-lg" aria-label="RollnEnterprises — Home">
-          <Logo className="h-10 w-auto shrink-0 sm:h-11" />
+        <a
+          href="#home"
+          className="flex items-center gap-2.5 rounded-lg"
+          aria-label="RollnEnterprises — Home"
+        >
+          <Logo className="h-9 w-auto shrink-0 sm:h-10" />
+          <span className="text-[15px] font-semibold tracking-tight text-slate-text sm:text-base">
+            RollnEnterprises
+          </span>
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex" role="list">
@@ -49,7 +56,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-[13px] font-medium text-teal-100/70 transition-colors hover:text-teal-50"
+                className="text-[13px] font-medium text-slate-600 transition-colors hover:text-slate-900"
               >
                 {link.label}
               </a>
@@ -68,7 +75,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-teal-100/80 transition-colors hover:bg-white/5 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-black/5 lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -89,7 +96,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="border-t border-teal-400/10 bg-[#141c1f]/95 px-5 py-5 backdrop-blur-xl lg:hidden"
+          className="border-t border-black/5 bg-white/95 px-5 py-5 backdrop-blur-xl lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation menu"
@@ -99,7 +106,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block rounded-xl px-3 py-3.5 text-[17px] font-medium text-teal-50 transition-colors hover:bg-white/5"
+                  className="block rounded-xl px-3 py-3.5 text-[17px] font-medium text-slate-800 transition-colors hover:bg-slate-100"
                   onClick={closeMenu}
                 >
                   {link.label}
@@ -107,7 +114,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-4 flex flex-col gap-3 border-t border-teal-400/10 pt-4">
+          <div className="mt-4 flex flex-col gap-3 border-t border-slate-100 pt-4">
             <a href="#products" className="btn-pill btn-pill-primary w-full" onClick={closeMenu}>
               Explore Products
             </a>
