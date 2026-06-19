@@ -52,7 +52,7 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className="section-shell flex h-12 items-center justify-between sm:h-14"
+        className="section-inner flex h-12 w-full items-center justify-between sm:h-14"
         aria-label="Main navigation"
       >
         <a
