@@ -67,6 +67,13 @@ body {
   line-height: 1.05;
 }
 
+.display-hero {
+  font-size: clamp(1.875rem, 4.2vw + 0.75rem, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
 .display-lg {
   font-size: clamp(2rem, 4.5vw, 3.25rem);
   font-weight: 700;

@@ -3,7 +3,7 @@ function HeroVisual() {
     <div className="relative mx-auto w-full max-w-3xl" aria-hidden="true">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 blur-3xl" />
       <div className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50 shadow-2xl shadow-slate-900/10 ring-1 ring-black/5">
-        <div className="flex flex-col items-center px-6 pt-12 pb-8 sm:px-10 sm:pt-16">
+        <div className="flex flex-col items-center px-6 pt-10 pb-6 sm:px-10 sm:pt-12">
           <svg viewBox="0 0 560 320" className="w-full max-w-lg animate-subtle-float" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
@@ -46,41 +46,43 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="section-shell relative w-full overflow-hidden bg-white pt-14 sm:pt-16"
+      className="section-shell relative w-full overflow-hidden bg-white"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="absolute -top-32 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-blue-100/80 via-indigo-50/50 to-teal-100/60 blur-3xl" />
       </div>
 
-      <div className="section-inner relative px-5 pt-16 pb-16 text-center sm:px-8 sm:pt-20 sm:pb-20 lg:px-12 lg:pt-24 lg:pb-24">
-        <p className="eyebrow mb-5 text-primary animate-fade-in-up">Accessibility-First Technology</p>
+      <div className="relative flex min-h-[calc(100svh-3rem)] flex-col justify-center pt-14 sm:min-h-[calc(100svh-3.5rem)] sm:pt-16">
+        <div className="section-inner relative px-5 py-6 text-center sm:px-8 lg:px-12">
+          <p className="eyebrow mb-3 text-primary animate-fade-in-up sm:mb-4">Accessibility-First Technology</p>
 
-        <h1
-          id="hero-heading"
-          className="display-xl mx-auto max-w-4xl text-slate-text animate-fade-in-up animate-delay-100"
-        >
-          Technology built for accessibility, independence, and everyday life.
-        </h1>
+          <h1
+            id="hero-heading"
+            className="display-hero mx-auto max-w-4xl text-slate-text animate-fade-in-up animate-delay-100"
+          >
+            Technology built for accessibility, independence, and everyday life.
+          </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-500 sm:text-xl sm:leading-relaxed animate-fade-in-up animate-delay-200">
-          RollnEnterprises creates innovative digital products that empower people
-          with disabilities through fitness, navigation, and accessibility-focused
-          solutions.
-        </p>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-500 sm:mt-5 sm:text-lg lg:text-xl animate-fade-in-up animate-delay-200">
+            RollnEnterprises creates innovative digital products that empower people
+            with disabilities through fitness, navigation, and accessibility-focused
+            solutions.
+          </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5 animate-fade-in-up animate-delay-300">
-          <a href="#products" className="btn-pill btn-pill-primary min-w-[11rem] px-7 py-3">
-            Explore Products
-          </a>
-          <a href="#mission" className="link-cta">
-            Learn more
-          </a>
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-5 animate-fade-in-up animate-delay-300">
+            <a href="#products" className="btn-pill btn-pill-primary min-w-[11rem] px-7 py-3">
+              Explore Products
+            </a>
+            <a href="#mission" className="link-cta">
+              Learn more
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="mt-14 sm:mt-16 lg:mt-20 animate-fade-in-up animate-delay-400">
-          <HeroVisual />
-        </div>
+      <div className="section-inner relative px-5 pb-12 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20 animate-fade-in-up animate-delay-400">
+        <HeroVisual />
       </div>
     </section>
   )
