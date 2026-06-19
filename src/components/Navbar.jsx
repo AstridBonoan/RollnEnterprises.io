@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Logo from './Logo'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -42,13 +41,10 @@ export default function Navbar() {
       >
         <a
           href="#home"
-          className="flex items-center gap-2.5 rounded-lg"
+          className="rounded-lg text-[15px] font-semibold tracking-tight text-slate-text sm:text-base"
           aria-label="RollnEnterprises — Home"
         >
-          <Logo className="h-9 w-auto shrink-0 sm:h-10" />
-          <span className="text-[15px] font-semibold tracking-tight text-slate-text sm:text-base">
-            RollnEnterprises
-          </span>
+          RollnEnterprises
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex" role="list">
