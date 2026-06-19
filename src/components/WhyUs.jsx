@@ -18,22 +18,16 @@ const stats = [
 
 const team = [
   {
-    name: 'Founder',
-    role: 'Chief Executive Officer',
-    bio: 'Leads RollnEnterprises with a vision to build technology that empowers independence and mobility.',
-    initials: 'RE',
+    name: 'Co-Founder',
+    role: 'CEO & Chief Marketing Officer (CMO)',
+    bio: 'Leads company strategy, brand, and outreach — connecting RollnEnterprises with the communities we serve.',
+    initials: 'CM',
   },
   {
-    name: 'Product Lead',
-    role: 'Head of Product',
-    bio: 'Shapes accessible product experiences grounded in real-world needs and community feedback.',
-    initials: 'PL',
-  },
-  {
-    name: 'Engineering Lead',
-    role: 'Head of Engineering',
-    bio: 'Builds reliable, inclusive software with accessibility standards at the core of every release.',
-    initials: 'EL',
+    name: 'Co-Founder',
+    role: 'CEO & Chief Technology Officer (CTO)',
+    bio: 'Leads product development and engineering — building accessible technology with inclusion at the core.',
+    initials: 'CT',
   },
 ]
 
@@ -52,7 +46,7 @@ function TeamCard({ member }) {
   return (
     <article className="flex flex-col rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100">
       <div className="flex items-center gap-4">
-        <TeamAvatar initials={member.initials} name={member.name} />
+        <TeamAvatar initials={member.initials} />
         <div>
           <h3 className="text-lg font-semibold tracking-tight text-slate-text">{member.name}</h3>
           <p className="text-sm font-medium text-primary">{member.role}</p>
@@ -130,14 +124,14 @@ export default function WhyUs() {
             Meet The Team
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-slate-500">
-            The people behind RollnEnterprises — building accessible technology
+            RollnEnterprises is led by two co-founders building accessible technology
             with lived experience and purpose.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-3xl gap-5 sm:mt-16 sm:grid-cols-2">
           {team.map((member) => (
-            <TeamCard key={member.name} member={member} />
+            <TeamCard key={member.role} member={member} />
           ))}
         </div>
       </div>
