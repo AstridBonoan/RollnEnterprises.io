@@ -24,18 +24,11 @@ function HeroVisual() {
             <path d="M408 160 L416 168 L434 148" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
             <rect x="88" y="180" width="72" height="48" rx="14" fill="url(#g2)" opacity="0.15" />
             <path d="M100 218 L128 192 L156 206 L200 168" stroke="#14B8A6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="148" cy="268" r="7" fill="#4F46E5" />
-            <circle cx="280" cy="278" r="7" fill="#2563EB" />
-            <circle cx="412" cy="268" r="7" fill="#14B8A6" />
-            <path d="M155 268 L273 278 M287 278 L405 268" stroke="#94A3B8" strokeWidth="1.5" strokeDasharray="5 5" />
+            <circle cx="280" cy="268" r="7" fill="#2563EB" />
           </svg>
         </div>
-        <div className="grid grid-cols-3 divide-x divide-slate-200 border-t border-slate-200 bg-white/80">
-          {['Fitness', 'Navigation', 'Living'].map((label) => (
-            <div key={label} className="px-4 py-4 text-center">
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">{label}</p>
-            </div>
-          ))}
+        <div className="border-t border-slate-200 bg-white/80 px-4 py-4 text-center">
+          <p className="text-xs font-semibold uppercase tracking-wider text-primary">RollnFitness</p>
         </div>
       </div>
     </div>
@@ -66,7 +59,7 @@ export default function Hero() {
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-500 sm:mt-5 sm:text-lg lg:text-xl animate-fade-in-up animate-delay-200">
             RollnEnterprises creates innovative digital products that empower people
-            with disabilities through fitness, navigation, and accessibility-focused
+            with disabilities through adaptive fitness and accessibility-focused
             solutions.
           </p>
 
