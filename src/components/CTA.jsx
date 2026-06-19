@@ -2,14 +2,14 @@ export default function CTA() {
   return (
     <section
       id="contact"
-      className="bg-slate-dark py-20 sm:py-28"
+      className="relative overflow-hidden bg-slate-dark py-20 sm:py-28"
       aria-labelledby="cta-heading"
     >
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
-        </div>
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+      </div>
 
+      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2
           id="cta-heading"
           className="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl"
