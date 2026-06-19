@@ -1,5 +1,3 @@
-import Logo from './Logo'
-
 const exploreLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Products', href: '#products' },
@@ -44,31 +42,37 @@ const socialLinks = [
   },
 ]
 
+function Logo({ className = '' }) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="32" height="32" rx="8" fill="#2563EB" />
+      <path d="M8 22V10h3.2l4.8 7.2V10H19v12h-3.2L11 14.8V22H8z" fill="white" />
+      <circle cx="23" cy="16" r="3" fill="#14B8A6" />
+    </svg>
+  )
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-void" role="contentinfo">
+    <footer className="bg-[#f5f5f7]" role="contentinfo">
       <div className="section-shell py-12 sm:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <a href="#home" className="inline-flex items-center gap-3 rounded-lg" aria-label="RollnEnterprises — Home">
-              <span className="h-10 w-10 shrink-0">
-                <Logo className="h-full w-full" />
-              </span>
-              <span className="bg-gradient-to-r from-bronze-light to-white bg-clip-text text-base font-bold text-transparent">
-                RollnEnterprises
-              </span>
+            <a href="#home" className="inline-flex items-center gap-2.5 rounded-lg" aria-label="RollnEnterprises — Home">
+              <Logo className="h-8 w-8" />
+              <span className="text-base font-semibold text-slate-text">RollnEnterprises</span>
             </a>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Accessibility-focused technology built by and for the disability community.
             </p>
           </div>
 
           <nav aria-label="Explore">
-            <h2 className="eyebrow text-slate-500">Explore</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Explore</h2>
             <ul className="mt-4 space-y-2.5" role="list">
               {exploreLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-muted transition-colors hover:text-cyan-400">
+                  <a href={link.href} className="text-sm text-slate-600 transition-colors hover:text-slate-900">
                     {link.label}
                   </a>
                 </li>
@@ -77,11 +81,11 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Company">
-            <h2 className="eyebrow text-slate-500">Company</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Company</h2>
             <ul className="mt-4 space-y-2.5" role="list">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted transition-colors hover:text-cyan-400">
+                  <a href={link.href} className="text-sm text-slate-600 transition-colors hover:text-slate-900">
                     {link.label}
                   </a>
                 </li>
@@ -90,7 +94,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h2 className="eyebrow text-slate-500">Connect</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Connect</h2>
             <div className="mt-4 flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -98,7 +102,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-surface text-muted transition-all hover:border-cyan-500/40 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-black/5 transition-colors hover:text-primary"
                   aria-label={`RollnEnterprises on ${social.label}`}
                 >
                   {social.icon}
@@ -108,9 +112,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 sm:flex-row">
           <p className="text-xs text-slate-500">&copy; 2026 RollnEnterprises. All rights reserved.</p>
-          <p className="text-xs text-slate-600">Built with accessibility at the core.</p>
+          <p className="text-xs text-slate-400">Built with accessibility at the core.</p>
         </div>
       </div>
     </footer>
