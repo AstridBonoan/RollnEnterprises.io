@@ -2,80 +2,50 @@ const visionCards = [
   {
     title: 'Mobility',
     description: 'Navigation tools that understand real-world accessibility challenges.',
-    icon: (
-      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    color: 'from-blue-500/10 to-blue-500/5',
   },
   {
     title: 'Fitness & Wellness',
     description: 'Adaptive health platforms that meet people where they are.',
-    icon: (
-      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
+    color: 'from-indigo-500/10 to-indigo-500/5',
   },
   {
     title: 'Independent Living',
     description: 'Home intelligence that empowers safer, more accessible spaces.',
-    icon: (
-      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    color: 'from-teal-500/10 to-teal-500/5',
   },
   {
     title: 'Global Impact',
     description: 'An ecosystem reaching millions of people worldwide.',
-    icon: (
-      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    color: 'from-violet-500/10 to-violet-500/5',
   },
 ]
 
 export default function Vision() {
   return (
-    <section
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-28"
-      aria-labelledby="vision-heading"
-    >
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute top-0 left-1/2 h-64 w-96 -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="vision" className="section-shell py-4 sm:py-6" aria-labelledby="vision-heading">
+      <div className="section-block bg-white px-6 py-14 ring-1 ring-black/5 sm:px-10 sm:py-20 lg:px-14">
         <div className="mx-auto max-w-3xl text-center">
-          <h2
-            id="vision-heading"
-            className="text-3xl font-extrabold tracking-tight text-slate-text sm:text-4xl lg:text-5xl"
-          >
+          <p className="eyebrow mb-4 text-slate-400">Our Vision</p>
+          <h2 id="vision-heading" className="display-md text-slate-text">
             The Future of Accessibility Technology
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl">
+          <p className="mt-5 text-lg leading-relaxed text-slate-500 sm:text-xl">
             Our vision is to create an ecosystem of products that improve mobility,
             fitness, navigation, and independent living for millions of people
             around the world.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {visionCards.map((card, index) => (
+        <div className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
+          {visionCards.map((card) => (
             <article
               key={card.title}
-              className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`group rounded-2xl bg-gradient-to-br ${card.color} p-6 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-0.5`}
             >
-              <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 p-3.5 text-primary transition-transform group-hover:scale-110">
-                {card.icon}
-              </div>
-              <h3 className="text-lg font-bold text-slate-text">{card.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {card.description}
-              </p>
+              <div className="mb-4 h-1 w-8 rounded-full bg-primary transition-all group-hover:w-12" aria-hidden="true" />
+              <h3 className="text-lg font-semibold tracking-tight text-slate-text">{card.title}</h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-slate-500">{card.description}</p>
             </article>
           ))}
         </div>
