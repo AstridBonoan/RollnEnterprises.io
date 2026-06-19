@@ -42,10 +42,13 @@ export default function Navbar() {
       >
         <a
           href="#home"
-          className="flex shrink-0 items-center rounded-lg"
+          className="flex items-center gap-2 rounded-lg"
           aria-label="RollnEnterprises — Home"
         >
-          <Logo className="h-9 w-auto sm:h-10" />
+          <Logo className="h-8 w-auto shrink-0 sm:h-9" />
+          <span className="text-[15px] font-semibold tracking-tight text-slate-text sm:text-base">
+            RollnEnterprises
+          </span>
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex" role="list">

@@ -1,11 +1,12 @@
-import logoImg from '../assets/logo.png'
+import logoEmblem from '../assets/logo-emblem.png'
 
-export default function Logo({ className = 'h-10 w-auto sm:h-11' }) {
+export default function Logo({ className = '' }) {
   return (
     <img
-      src={logoImg}
-      alt="Rolln Enterprises — Technology for Mobility & Life"
+      src={logoEmblem}
+      alt=""
       className={`object-contain ${className}`}
+      aria-hidden="true"
     />
   )
 }

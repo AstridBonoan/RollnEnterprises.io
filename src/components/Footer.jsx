@@ -50,8 +50,9 @@ export default function Footer() {
       <div className="section-inner py-12 sm:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <a href="#home" className="inline-flex rounded-lg" aria-label="RollnEnterprises — Home">
-              <Logo className="h-12 w-auto sm:h-14" />
+            <a href="#home" className="inline-flex items-center gap-2.5 rounded-lg" aria-label="RollnEnterprises — Home">
+              <Logo className="h-9 w-auto shrink-0" />
+              <span className="text-base font-semibold text-slate-text">RollnEnterprises</span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Accessibility-focused technology built by and for the disability community.
