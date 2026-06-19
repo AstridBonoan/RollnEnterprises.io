@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <a href="#home" className="inline-flex rounded-lg" aria-label="RollnEnterprises — Home">
-              <Logo className="h-14 w-auto shrink-0 sm:h-16" />
+              <Logo className="h-20 w-auto shrink-0 sm:h-24" />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Accessibility-focused technology built by and for the disability community.

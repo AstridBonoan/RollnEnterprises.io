@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="section-shell relative flex min-h-svh w-full flex-col justify-center overflow-hidden bg-white pt-14 sm:pt-16"
+      className="section-shell relative flex min-h-svh w-full flex-col justify-center overflow-hidden bg-white pt-20 sm:pt-24"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">

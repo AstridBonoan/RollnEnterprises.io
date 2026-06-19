@@ -37,11 +37,11 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className="section-inner flex h-12 w-full items-center justify-between sm:h-14"
+        className="section-inner flex h-16 w-full items-center justify-between py-2 sm:h-20"
         aria-label="Main navigation"
       >
         <a href="#home" className="rounded-lg" aria-label="RollnEnterprises — Home">
-          <Logo className="h-10 w-auto shrink-0 sm:h-11" />
+          <Logo className="h-14 w-auto shrink-0 sm:h-[4.5rem]" />
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex" role="list">
