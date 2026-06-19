@@ -16,6 +16,53 @@ const stats = [
   },
 ]
 
+const team = [
+  {
+    name: 'Founder',
+    role: 'Chief Executive Officer',
+    bio: 'Leads RollnEnterprises with a vision to build technology that empowers independence and mobility.',
+    initials: 'RE',
+  },
+  {
+    name: 'Product Lead',
+    role: 'Head of Product',
+    bio: 'Shapes accessible product experiences grounded in real-world needs and community feedback.',
+    initials: 'PL',
+  },
+  {
+    name: 'Engineering Lead',
+    role: 'Head of Engineering',
+    bio: 'Builds reliable, inclusive software with accessibility standards at the core of every release.',
+    initials: 'EL',
+  },
+]
+
+function TeamAvatar({ initials }) {
+  return (
+    <div
+      className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary/10 text-lg font-semibold text-primary"
+      aria-hidden="true"
+    >
+      {initials}
+    </div>
+  )
+}
+
+function TeamCard({ member }) {
+  return (
+    <article className="flex flex-col rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100">
+      <div className="flex items-center gap-4">
+        <TeamAvatar initials={member.initials} name={member.name} />
+        <div>
+          <h3 className="text-lg font-semibold tracking-tight text-slate-text">{member.name}</h3>
+          <p className="text-sm font-medium text-primary">{member.role}</p>
+        </div>
+      </div>
+      <p className="mt-4 text-[15px] leading-relaxed text-slate-500">{member.bio}</p>
+    </article>
+  )
+}
+
 function WhyVisual() {
   return (
     <div className="relative h-full min-h-[20rem] lg:min-h-full" aria-hidden="true">
@@ -73,6 +120,25 @@ export default function WhyUs() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      <div className="section-inner border-t border-slate-200 px-6 py-16 sm:px-10 sm:py-20 lg:py-24" aria-labelledby="team-heading">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="eyebrow mb-4 text-slate-400">Meet The Team</p>
+          <h2 id="team-heading" className="display-md text-slate-text">
+            Meet The Team
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-slate-500">
+            The people behind RollnEnterprises — building accessible technology
+            with lived experience and purpose.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+          {team.map((member) => (
+            <TeamCard key={member.name} member={member} />
+          ))}
         </div>
       </div>
     </section>
