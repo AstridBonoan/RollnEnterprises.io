@@ -1,3 +1,5 @@
+import Logo from './Logo'
+
 const exploreLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Products', href: '#products' },
@@ -42,25 +44,14 @@ const socialLinks = [
   },
 ]
 
-function Logo({ className = '' }) {
-  return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect width="32" height="32" rx="8" fill="#2563EB" />
-      <path d="M8 22V10h3.2l4.8 7.2V10H19v12h-3.2L11 14.8V22H8z" fill="white" />
-      <circle cx="23" cy="16" r="3" fill="#14B8A6" />
-    </svg>
-  )
-}
-
 export default function Footer() {
   return (
     <footer className="w-full border-t border-slate-200 bg-slate-50" role="contentinfo">
       <div className="section-inner py-12 sm:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <a href="#home" className="inline-flex items-center gap-2.5 rounded-lg" aria-label="RollnEnterprises — Home">
-              <Logo className="h-8 w-8" />
-              <span className="text-base font-semibold text-slate-text">RollnEnterprises</span>
+            <a href="#home" className="inline-flex rounded-lg" aria-label="RollnEnterprises — Home">
+              <Logo className="h-12 w-auto sm:h-14" />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Accessibility-focused technology built by and for the disability community.

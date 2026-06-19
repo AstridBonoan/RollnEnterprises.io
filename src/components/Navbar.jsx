@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Logo from './Logo'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -7,22 +8,6 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
-
-function Logo({ className = '' }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect width="32" height="32" rx="8" fill="#2563EB" />
-      <path d="M8 22V10h3.2l4.8 7.2V10H19v12h-3.2L11 14.8V22H8z" fill="white" />
-      <circle cx="23" cy="16" r="3" fill="#14B8A6" />
-    </svg>
-  )
-}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -57,13 +42,10 @@ export default function Navbar() {
       >
         <a
           href="#home"
-          className="flex items-center gap-2 rounded-lg"
+          className="flex shrink-0 items-center rounded-lg"
           aria-label="RollnEnterprises — Home"
         >
-          <Logo className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
-          <span className="text-[15px] font-semibold tracking-tight text-slate-text sm:text-base">
-            RollnEnterprises
-          </span>
+          <Logo className="h-9 w-auto sm:h-10" />
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex" role="list">
