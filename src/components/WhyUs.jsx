@@ -19,18 +19,18 @@ const stats = [
 function WhyVisual() {
   return (
     <div className="relative h-full min-h-[20rem] lg:min-h-full" aria-hidden="true">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2a4548] via-[#1f2e33] to-[#141c1f]" />
       <div className="relative flex h-full min-h-[20rem] items-center justify-center p-8 sm:p-12 lg:min-h-[28rem]">
         <svg viewBox="0 0 400 400" className="w-full max-w-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="200" cy="200" r="140" stroke="#334155" strokeWidth="1" fill="none" opacity="0.6" />
-          <circle cx="200" cy="200" r="90" stroke="#475569" strokeWidth="1" strokeDasharray="6 6" fill="none" />
-          <circle cx="200" cy="110" r="10" fill="#2563EB" />
-          <circle cx="290" cy="200" r="10" fill="#14B8A6" />
-          <circle cx="200" cy="290" r="10" fill="#4F46E5" />
-          <circle cx="110" cy="200" r="10" fill="#60A5FA" opacity="0.7" />
-          <rect x="168" y="168" width="64" height="64" rx="16" fill="#2563EB" />
-          <path d="M184 200 L194 210 L216 186" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <text x="200" y="350" textAnchor="middle" fill="#64748B" fontSize="13" fontFamily="Inter, sans-serif">
+          <circle cx="200" cy="200" r="140" stroke="#3d8b8a" strokeWidth="1" fill="none" opacity="0.4" />
+          <circle cx="200" cy="200" r="90" stroke="#c49a6c" strokeWidth="1" strokeDasharray="6 6" fill="none" opacity="0.5" />
+          <circle cx="200" cy="110" r="10" fill="#5eead4" />
+          <circle cx="290" cy="200" r="10" fill="#c49a6c" />
+          <circle cx="200" cy="290" r="10" fill="#3d8b8a" />
+          <circle cx="110" cy="200" r="10" fill="#5eead4" opacity="0.7" />
+          <rect x="168" y="168" width="64" height="64" rx="16" fill="#c49a6c" />
+          <path d="M184 200 L194 210 L216 186" stroke="#141c1f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <text x="200" y="350" textAnchor="middle" fill="#94b4b4" fontSize="13" fontFamily="Inter, sans-serif">
             Accessibility Ecosystem
           </text>
         </svg>
@@ -41,21 +41,21 @@ function WhyVisual() {
 
 export default function WhyUs() {
   return (
-    <section id="about" className="section-shell w-full border-t border-slate-200 bg-white" aria-labelledby="why-heading">
+    <section id="about" className="section-shell section-divider section-surface w-full" aria-labelledby="why-heading">
       <div className="grid lg:grid-cols-2">
         <WhyVisual />
 
         <div className="flex flex-col justify-center px-6 py-16 sm:px-10 sm:py-20 lg:px-14 lg:py-24">
-          <p className="eyebrow mb-4 text-slate-400">Why We Exist</p>
-          <h2 id="why-heading" className="display-md text-slate-text">
+          <p className="eyebrow mb-4 text-teal-300/60">Why We Exist</p>
+          <h2 id="why-heading" className="display-md text-teal-50">
             Why We Exist
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-slate-500">
+          <p className="mt-5 text-lg leading-relaxed text-teal-100/65">
             People with disabilities often face barriers that many technologies
             overlook. RollnEnterprises exists to create products specifically
             designed around accessibility, independence, and real-world usability.
           </p>
-          <p className="mt-4 text-[15px] leading-relaxed text-slate-500 sm:text-base">
+          <p className="mt-4 text-[15px] leading-relaxed text-teal-100/60 sm:text-base">
             Founded by members of the disability community, we bring lived
             experience to every decision — from product design to engineering to
             community engagement.
@@ -65,11 +65,11 @@ export default function WhyUs() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl bg-slate-50 px-4 py-5 ring-1 ring-slate-100"
+                className="rounded-2xl bg-[#1a282c]/80 px-4 py-5 ring-1 ring-teal-400/10"
               >
-                <p className="text-2xl font-bold tracking-tight text-slate-text">{stat.value}</p>
-                <p className="mt-1 text-sm font-semibold text-slate-text">{stat.label}</p>
-                <p className="mt-1 text-xs leading-relaxed text-slate-500">{stat.description}</p>
+                <p className="text-2xl font-bold tracking-tight text-secondary">{stat.value}</p>
+                <p className="mt-1 text-sm font-semibold text-teal-50">{stat.label}</p>
+                <p className="mt-1 text-xs leading-relaxed text-teal-100/55">{stat.description}</p>
               </div>
             ))}
           </div>

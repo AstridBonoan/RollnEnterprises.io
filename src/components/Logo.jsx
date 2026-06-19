@@ -1,17 +1,10 @@
-import logoMark from '../assets/logo-mark.png'
-import logoFull from '../assets/logo-full.png'
+import logo from '../assets/logo.png'
 
-export default function Logo({ variant = 'mark', className = '' }) {
-  const src = variant === 'full' ? logoFull : logoMark
-  const alt =
-    variant === 'full'
-      ? 'RollnFitness'
-      : 'Rolln Enterprises'
-
+export default function Logo({ className = '' }) {
   return (
     <img
-      src={src}
-      alt={alt}
+      src={logo}
+      alt="Rolln Enterprises — Technology for mobility and life"
       className={`object-contain ${className}`}
     />
   )

@@ -46,25 +46,24 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-slate-200 bg-slate-50" role="contentinfo">
+    <footer className="w-full border-t border-teal-400/10 bg-[#0f1618]" role="contentinfo">
       <div className="section-inner py-12 sm:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <a href="#home" className="inline-flex items-center gap-2.5 rounded-lg" aria-label="RollnEnterprises — Home">
-              <Logo className="h-11 w-auto shrink-0 sm:h-12" />
-              <span className="text-base font-semibold text-slate-text">RollnEnterprises</span>
+            <a href="#home" className="inline-flex rounded-lg" aria-label="RollnEnterprises — Home">
+              <Logo className="h-16 w-auto shrink-0 sm:h-20" />
             </a>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-teal-100/55">
               Accessibility-focused technology built by and for the disability community.
             </p>
           </div>
 
           <nav aria-label="Explore">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Explore</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-teal-300/50">Explore</h2>
             <ul className="mt-4 space-y-2.5" role="list">
               {exploreLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-slate-600 transition-colors hover:text-slate-900">
+                  <a href={link.href} className="text-sm text-teal-100/65 transition-colors hover:text-teal-50">
                     {link.label}
                   </a>
                 </li>
@@ -73,11 +72,11 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Company">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Company</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-teal-300/50">Company</h2>
             <ul className="mt-4 space-y-2.5" role="list">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-slate-600 transition-colors hover:text-slate-900">
+                  <a href={link.href} className="text-sm text-teal-100/65 transition-colors hover:text-teal-50">
                     {link.label}
                   </a>
                 </li>
@@ -86,7 +85,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Connect</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-teal-300/50">Connect</h2>
             <div className="mt-4 flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -94,7 +93,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-black/5 transition-colors hover:text-primary"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1a282c] text-teal-100/60 ring-1 ring-teal-400/10 transition-colors hover:text-secondary"
                   aria-label={`RollnEnterprises on ${social.label}`}
                 >
                   {social.icon}
@@ -104,9 +103,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 sm:flex-row">
-          <p className="text-xs text-slate-500">&copy; 2026 RollnEnterprises. All rights reserved.</p>
-          <p className="text-xs text-slate-400">Built with accessibility at the core.</p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-teal-400/10 pt-8 sm:flex-row">
+          <p className="text-xs text-teal-100/45">&copy; 2026 RollnEnterprises. All rights reserved.</p>
+          <p className="text-xs text-teal-100/35">Built with accessibility at the core.</p>
         </div>
       </div>
     </footer>
