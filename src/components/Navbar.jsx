@@ -11,13 +11,6 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -29,13 +22,7 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'border-b border-black/5 bg-white/72 shadow-sm backdrop-blur-xl backdrop-saturate-150'
-          : 'bg-white/50 backdrop-blur-md'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white">
       <nav
         className="section-inner flex h-16 w-full items-center justify-between py-2 sm:h-20"
         aria-label="Main navigation"
@@ -68,7 +55,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-black/5 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-700 transition-colors hover:bg-slate-100 lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -89,7 +76,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="border-t border-black/5 bg-white/95 px-5 py-5 backdrop-blur-xl lg:hidden"
+          className="border-t border-slate-200 bg-white px-5 py-5 lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation menu"
