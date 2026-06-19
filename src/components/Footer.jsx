@@ -54,8 +54,8 @@ function Logo({ className = '' }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f5f5f7]" role="contentinfo">
-      <div className="section-shell py-12 sm:py-14">
+    <footer className="w-full border-t border-slate-200 bg-slate-50" role="contentinfo">
+      <div className="section-inner py-12 sm:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <a href="#home" className="inline-flex items-center gap-2.5 rounded-lg" aria-label="RollnEnterprises — Home">

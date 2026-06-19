@@ -23,8 +23,8 @@ const visionCards = [
 
 export default function Vision() {
   return (
-    <section id="vision" className="section-shell py-4 sm:py-6" aria-labelledby="vision-heading">
-      <div className="section-block bg-white px-6 py-14 ring-1 ring-black/5 sm:px-10 sm:py-20 lg:px-14">
+    <section id="vision" className="section-shell w-full border-t border-slate-200 bg-slate-50" aria-labelledby="vision-heading">
+      <div className="section-inner py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow mb-4 text-slate-400">Our Vision</p>
           <h2 id="vision-heading" className="display-md text-slate-text">
