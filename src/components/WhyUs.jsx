@@ -11,8 +11,8 @@ const stats = [
   },
   {
     label: 'Built For Impact',
-    value: '3+',
-    description: 'Products spanning fitness, navigation, and home living.',
+    value: '1st',
+    description: 'RollnFitness — our first platform in active development.',
   },
 ]
 
