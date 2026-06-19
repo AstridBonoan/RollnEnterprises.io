@@ -45,7 +45,7 @@ export default function Navbar() {
           className="flex items-center gap-2 rounded-lg"
           aria-label="RollnEnterprises — Home"
         >
-          <Logo className="h-8 w-auto shrink-0 sm:h-9" />
+          <Logo className="h-10 w-10 shrink-0 sm:h-11 sm:w-11" />
           <span className="text-[15px] font-semibold tracking-tight text-slate-text sm:text-base">
             RollnEnterprises
           </span>
